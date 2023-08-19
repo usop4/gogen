@@ -52,17 +52,19 @@ export default function Home(){
 
     const resjson = await res.json()
     console.log(resjson)
-    alert("登録完了")
+    fetchData()
+  }
+
+  const fetchData = async() =>{
+    const response = await fetch(url)
+    const responseData = await response.json()
+    setData(responseData)
   }
 
   useEffect(() => {
-    fetch(url)
-    .then(res=>res.json())
-    .then(res=>{
-      setData(res);
-    });
+    fetchData()
   },[])
- 
+
   return (
     <Layout header="gogen with chatGPT" title="韓国語の語源検索">
       <div className="container">
