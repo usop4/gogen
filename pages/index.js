@@ -2,11 +2,11 @@
 import { useState, useEffect } from 'react'
 import Layout from '../components/layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Button, Form, Navbar, Container, Nav } from 'react-bootstrap';
+import { Table, Button, Form, Navbar, Container, Nav } from 'react-bootstrap';
 
 export default function Home(){
 
-  const url = 'http://ik1-201-74412.vs.sakura.ne.jp:5000/list'
+  const url = 'https://morocco.sakura.ne.jp/gogen/list.php'
 
   const [data,setData] = useState({data:[]})
   const [word, setWord] = useState('')
@@ -85,11 +85,11 @@ export default function Home(){
           </Form.Group>
         </Form>
 
-        <table class="table">
+        <Table bordered >
           <thead>
             <tr>
-              <th>id</th>
-              <th>gogen</th>
+              <th>単語</th>
+              <th>語源</th>
             </tr>
           </thead>
           <tbody>
@@ -100,7 +100,7 @@ export default function Home(){
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
       </div>
     </Layout>
   )

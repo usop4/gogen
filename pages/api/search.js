@@ -1,9 +1,9 @@
 export default async function handler(req, res) {
 
-  const url = 'http://ik1-201-74412.vs.sakura.ne.jp:5000/search/'+req.body.word
-  console.log(url)
+  const url = 'https://morocco.sakura.ne.jp/gogen/search.php?q='+req.body.word
 
   const response = await fetch(url)
+
   const data = await response.json()
   console.log(data)
 
