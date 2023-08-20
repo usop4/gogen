@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Header from './Header'
 import Footer from './Footer'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Layout(props){
     return (
@@ -17,6 +17,7 @@ export default function Layout(props){
                 {props.children}
             </div>
             <Footer footer=""></Footer>
+            <Analytics />
         </div>
 
     )
