@@ -22,6 +22,7 @@ export default function Home(){
 
   const searchButtonHandler = async (e) => {
     e.preventDefault()
+    await setGogen("...")
 
     const res = await fetch('/api/search', {
       method: 'POST',
@@ -38,7 +39,6 @@ export default function Home(){
 
   const resistButtonHandler = async (e) => {
     e.preventDefault()
-
     const res = await fetch('/api/resist', {
       method: 'POST',
       headers: {
