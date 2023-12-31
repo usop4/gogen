@@ -8,6 +8,7 @@ export default function Layout(props){
         <div>
             <Head>
                 <title>{props.title}</title>
+                <meta name="google-site-verification" content="Q7DcTQpJOvWdN9iyyI_w7SfMmN7KY0tkw_xPF11qYnE" />
             </Head>
             <Header header={props.header} />
             <div className="container">
